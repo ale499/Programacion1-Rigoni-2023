@@ -23,7 +23,7 @@ else:
     print("Error: Día de la semana no válido.")
     exit()
 
-# Procesar según el nivel
+# Categoria según el nivel
 if nivel in ["inicial", "intermedio", "avanzado"]:
     tiene_examenes = input("¿Hubo exámenes? (Sí/No): ").lower()
     if tiene_examenes == "si" :
