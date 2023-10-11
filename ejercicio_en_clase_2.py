@@ -25,10 +25,35 @@ for i in range(5):
 """ Crear un programa que solicite el ingreso de números enteros positivos, hasta que el usuario ingrese el
 0. Por cada número, informar cuántos dígitos pares y cuántos impares tiene.
 Al finalizar, informar la cantidad de dígitos pares y de dígitos impares leídos en total."""
-"""
-par = 0
-impar = 0
+total_pares = 0
+total_impares = 0
 
-while i != 0 :
+while True:
+    numero = int(input("Ingrese un número entero positivo (o 0 para salir): "))
     
-    """
+    if numero == 0:
+        break  # Salir del bucle si se ingresa 0
+    
+    # Contar dígitos pares e impares 
+    pares = 0
+    impares = 0
+    
+    while numero > 0:
+        digito = numero % 10
+        if digito % 2 == 0:
+            pares += 1
+        else:
+            impares += 1
+        numero //= 10
+    
+    # Informamos la cantidad de dígitos pares e impares en el número actual
+    print(f"Dígitos pares: {pares}")
+    print(f"Dígitos impares: {impares}")
+    
+    # Actualizamos los totales
+    total_pares += pares
+    total_impares += impares
+
+# Informamos el total de dígitos pares e impares leídos
+print(f"Total de dígitos pares: {total_pares}")
+print(f"Total de dígitos impares: {total_impares}")
