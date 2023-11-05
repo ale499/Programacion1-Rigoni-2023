@@ -1,4 +1,3 @@
-
 import funciones
 
 while True:
