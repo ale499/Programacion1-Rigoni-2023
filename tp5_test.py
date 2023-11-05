@@ -1,4 +1,5 @@
 import pytest
+import math
 
 from Trabajo_practico_5 import module_vector
 def test_module_vector():
